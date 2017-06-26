@@ -3,7 +3,7 @@ $task=$date=$desc=$datec=" ";
 
 //if(isset($_POST['ADD'])){
 //echo "add another task";
-//}
+//}   this code is not needed as add is the default 
 
 if(isset($_POST['LIST'])){
 echo "View the list of tasks, press browser back key to exit";
@@ -11,7 +11,7 @@ $row = 1;
 $header = ["Task","Created","Description","Completed"];
 echo "<table>";
   
-/*  still working on changing the out put to a column table format
+/*  still working on changing the output to a column table format
 echo '<table class="table">';  
 echo '    <thead>';
 echo '      <tr>';
@@ -32,18 +32,7 @@ if (($handle = fopen("tasklist.csv", "r")) !== FALSE) {
         for ($c=0; $c < $num; $c++) {
  echo "<td><td>".$header[$c]."<td><td>: ".$data[$c] . "</td>";
 
-/*still working on changing the out put to a column table format
-echo '    <tbody>';
-echo '      <tr>';
-echo '        <td>$data($task)';
-echo '        <td>$data($date)';
-echo '        <td>$data(desc)';
-echo '        <td>$data(datec)</td>';
-echo'        </tr>';
-echo '    </tbody>';
-echo '</table>'; 
-*/
-        }
+     }
   }
     fclose($handle);
  echo "</tr></table>";
@@ -54,6 +43,7 @@ for($x=0;$x<50;$x++){
 }
 }
 
+// deletes the csv file
 if(isset($_POST['DELETE'])){
 unlink("tasklist.csv");
 echo "Deleted the csv file";
@@ -77,9 +67,8 @@ if(isset($_POST['submit'])){
   
 // if there are no errors
  if(!isset($error)){
-
      
-// New csv file     
+// Creates a new csv file     
 $filename=fopen("tasklist.csv","a");
 fwrite($filename,"$task,$date,$desc,$datec\n");
 print "task added";
