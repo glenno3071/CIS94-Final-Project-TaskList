@@ -61,3 +61,4 @@ if(isset($error)){
 if(isset($_POST['submit'])) {
    addTask($_POST); 
 }
+// #2 and #3 seems as if can be put into same coding set
