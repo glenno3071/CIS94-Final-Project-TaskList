@@ -1,10 +1,11 @@
 <form class="form-horizontal">
 <fieldset>
 
-<!-- Form Name -->
-<legend><?php echo $page->legend; ?></legend>
+<!-- Form Name 
+<legend><?php echo $page->legend; ?></legend> -->
 
-<!-- Text input-->
+<!-- Text input   I changed some field names and added a field for date, as in date task entered-->
+  
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Task</label>  
   <div class="col-md-4">
@@ -15,16 +16,24 @@
 
 <!-- Textarea -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textarea">Note</label>
+  <label class="col-md-4 control-label" for="date">Date</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="note" name="note"></textarea>
+    <input type="date" class="form-control" id="date" name="date">
+  </div>
+</div>  
+  
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Desc</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="Desc" name="Desc"></textarea>
   </div>
 </div>
 <!-- Textarea -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="datecompleted">Date Completed</label>
+  <label class="col-md-4 control-label" for="datec">Date Completed</label>
   <div class="col-md-4">                     
-    <input type="date" class="form-control" id="datecompleted" name="datecompleted">
+    <input type="date" class="form-control" id="datec" name="datecompleted">
   </div>
 </div>
 
