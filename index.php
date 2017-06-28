@@ -1,4 +1,6 @@
 <?php
+// Please note that the index file is the project at the moment.  Everythiing else is a work in progress
+
 $task=$date=$desc=$datec=" ";
 
 //if(isset($_POST['ADD'])){
