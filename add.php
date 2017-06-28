@@ -3,11 +3,11 @@
 include 'Page.php';
 $page = new Page();
 $page->title = 'Add Task';
-
 include 'header.php';
 include 'form_tpl.php';
 include 'footer.php';
 
+include 'task.php';
 // 1.
 // Put the Task class in a file called Task.php
 // Then include it here as is done for the header.php and form_tpl.php and footer.php 
